@@ -20,7 +20,6 @@ for i in links:
     lines = soup_puzzle.find_all('p')
     for poss_line in lines:
         poss_line_text = poss_line.text
-        print(poss_line_text)
         if poss_line_text[:4] == "Hunt":
             hunt_name = poss_line_text.split(":")[1][1:-1]
         elif poss_line_text[:6] == "Author":
