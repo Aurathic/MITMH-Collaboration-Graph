@@ -10,7 +10,7 @@ soup = BeautifulSoup(main_page.data, 'html.parser')
 links = soup.find_all('a')[2:-1]
 
 g = nx.Graph()
-fh = open("katz_number_graph.txt",'wb')
+fh = open("mitmh_collab_edges.txt",'wb')
 
 for i in links:
     puzzle_url = f"https://devjoe.appspot.com/huntindex{i['href'][2:]}"
